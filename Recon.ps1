@@ -1,4 +1,9 @@
-Start-Transcript -Path "C:\logs\my-script.log"
+try {
+    Start-Transcript -Path "C:\logs\my-script.log"
+} catch {
+    Write-Warning "Unable to start transcript: $_"
+}
+
 clear
 Write-Host "
 
